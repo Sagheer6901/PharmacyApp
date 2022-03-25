@@ -11,11 +11,8 @@ class SliderImage extends StatelessWidget {
         margin: const EdgeInsets.all(6.0),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8.0),
-          image: DecorationImage(
-            image: NetworkImage(imageDirectory),
-            fit: BoxFit.cover,
-          ),
         ),
+        child: Image.asset(imageDirectory),
       ),
       onTap: () {},
     );
@@ -31,11 +28,13 @@ Widget productSlider() {
         enableInfiniteScroll: false),
     items: const [
       SliderImage(
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIG3O-IngohK6nvicXD5BbO56FYvkMWcc3Tg&usqp=CAU"),
+          "assets/images/medicines.png"),
       SliderImage(
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzHeTpKw8nl9VyiRJIrLeNAHQRLEInlFKFDA&usqp=CAU"),
+          "assets/images/surgical.png"),
       SliderImage(
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz7h568VBpN0Df09afk16bbyIE_6s5DdJ8fA&usqp=CAU"),
+          "assets/images/medicines.png"),
+      SliderImage(
+          "assets/images/surgical.png"),
     ],
   );
 }
