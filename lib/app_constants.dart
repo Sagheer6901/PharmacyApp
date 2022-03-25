@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Constants{
   static String appName = "Servaid";
-  static Color primaryColor = Colors.blueAccent;
+  static Color primaryColor = const Color(0xff005A92);
   static Color secondaryColor = Colors.white;
   static Color shadePrimaryColor = const Color(0xffF0F8FF);
 

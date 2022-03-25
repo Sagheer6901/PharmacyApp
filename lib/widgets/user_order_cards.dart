@@ -12,7 +12,7 @@ class UserOrderCards extends StatelessWidget {
           child: InkWell(
             onTap: () {},
             child: Container(
-              margin: const EdgeInsets.all(15),
+              margin: const EdgeInsets.all(10),
               padding: const EdgeInsets.all(15),
               decoration: const BoxDecoration(
                   color: Colors.pinkAccent,
@@ -20,6 +20,7 @@ class UserOrderCards extends StatelessWidget {
               height: 120,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
                     "Place your order instantly within seconds",
@@ -50,7 +51,7 @@ class UserOrderCards extends StatelessWidget {
           child: InkWell(
             onTap: () {},
             child: Container(
-              margin: const EdgeInsets.all(15),
+              margin: const EdgeInsets.all(10),
               padding: const EdgeInsets.all(15),
               decoration: const BoxDecoration(
                   color: Colors.greenAccent,
@@ -58,6 +59,7 @@ class UserOrderCards extends StatelessWidget {
               height: 120,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
                     "Got a prescription?\nUpload and get yout meds now!",

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertest/app_constants.dart';
 
 class ProductCard extends StatefulWidget {
   final String text, imageDirectory;
   final double prevPrice, currentPrice, discount, creditVal;
-  const ProductCard(this.text, this.prevPrice, this.currentPrice,
-      this.discount, this.creditVal, this.imageDirectory);
+  const ProductCard(this.text, this.prevPrice, this.currentPrice, this.discount,
+      this.creditVal, this.imageDirectory);
 
   @override
   State<ProductCard> createState() => _ProductCardState();
@@ -32,14 +33,14 @@ class _ProductCardState extends State<ProductCard> {
                   child: Image.asset(
                     widget.imageDirectory,
                     height: 250,
-                    width: 220,
+                    width: 200,
                     fit: BoxFit.cover,
                   ),
                 ),
                 Positioned(
                     // left: 120,
                     top: 10,
-                    right: 10,
+                    right: 5,
                     child: Container(
                       decoration: const BoxDecoration(
                           color: Colors.red,
@@ -52,7 +53,7 @@ class _ProductCardState extends State<ProductCard> {
                       ),
                     )),
                 Positioned(
-                    left: 10,
+                    left: 5,
                     top: 10,
                     //   right: 10,
                     child: Container(
@@ -86,7 +87,8 @@ class _ProductCardState extends State<ProductCard> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text('Rs. ${widget.prevPrice}',
-                    style: const TextStyle(decoration: TextDecoration.lineThrough)),
+                    style: const TextStyle(
+                        decoration: TextDecoration.lineThrough)),
                 Text("  Rs. ${widget.currentPrice}")
               ],
             ),
@@ -96,23 +98,29 @@ class _ProductCardState extends State<ProductCard> {
                 const SizedBox(
                   width: 100,
                 ),
-                SizedBox(
-                  height: 30,
-                  width: 120,
+                Container(
+                  margin: const EdgeInsets.all(10),
+                  height: 50,
+                  width: 125,
+                  decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                    color: Colors.black12,
+
+                  ),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       _itemCount != 0
                           ? IconButton(
-                              icon: const Icon(Icons.delete),
+                              icon: const Icon(Icons.delete, size: 30,),
                               onPressed: () => setState(() => _itemCount--),
                             )
                           : const SizedBox(
                               width: 60,
                             ),
-                      Text(_itemCount.toString()),
+                      Text(_itemCount.toString(),style: const TextStyle(fontSize: 20),),
                       IconButton(
-                          icon: const Icon(Icons.add),
+                          icon: const Icon(Icons.add, size: 30),
                           onPressed: () => setState(() => _itemCount++)),
                     ],
                   ),

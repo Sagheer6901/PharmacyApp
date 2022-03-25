@@ -5,28 +5,17 @@ import 'package:fluttertest/screens/navigation.dart';
 import 'app_constants.dart';
 
 void main() {
-  SystemUiOverlayStyle(
-    statusBarColor: Constants.primaryColor,
-  );
+  SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle.light.copyWith(statusBarColor: Constants.primaryColor));
 
   runApp(const MyApp());
 }
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-
   @override
   Widget build(BuildContext context) {
-
     return const MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: Navigation()
-    );
+        debugShowCheckedModeBanner: false, home: Navigation());
   }
 }
